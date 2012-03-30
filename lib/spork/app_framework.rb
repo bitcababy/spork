@@ -1,5 +1,5 @@
 class Spork::AppFramework
-  APP_FRAMEWORKS = []
+  APP_FRAMEWORKS = [] unless defined? APP_FRAMEWORKS
   def self.inherited(child)
     APP_FRAMEWORKS << child
   end
