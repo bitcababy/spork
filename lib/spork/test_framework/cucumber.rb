@@ -1,6 +1,6 @@
 class Spork::TestFramework::Cucumber < Spork::TestFramework
-  DEFAULT_PORT = 8990
-  HELPER_FILE = File.join(Dir.pwd, "features/support/env.rb")
+  DEFAULT_PORT = 8990 unless defined? DEFAULT_PORT
+  HELPER_FILE = File.join(Dir.pwd, "features/support/env.rb") unless defined? HELPER_FILE
 
   class << self
     # REMOVE WHEN SUPPORT FOR 0.3.95 AND EARLIER IS DROPPED
